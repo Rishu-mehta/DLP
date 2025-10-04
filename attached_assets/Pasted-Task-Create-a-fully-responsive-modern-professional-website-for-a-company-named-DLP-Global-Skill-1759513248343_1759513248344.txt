@@ -1,0 +1,145 @@
+Task:
+Create a fully responsive, modern, professional website for a company named “DLP Global Skillers Solutions” using React (with TypeScript preferred), Framer Motion, React Three Fiber (for 3D elements/hero section), GSAP animations, Glassmorphism & Neumorphism styles, and a global theme system.
+
+Requirements
+
+Global Theme & Layout
+
+Use a global theme provider for colors, spacing, typography, shadows, etc.
+
+Font family: modern sans-serif (e.g., Poppins, Inter, or Montserrat).
+
+Responsive typography → font size and spacing should adjust based on screen width.
+
+Dark + light mode support (optional but preferred).
+
+Smooth transitions when switching pages (Framer Motion page transitions).
+
+Maintain consistent glassmorphism for navbars/cards and neumorphism for buttons/interactive elements.
+
+Pages & Navigation
+
+Navbar:
+
+Sticky, semi-transparent with glassmorphism effect.
+
+Company name/logo on the left → DLP Global Skillers Solutions.
+
+Navigation links: Home, About Us, Services (with dropdown), Products, Insights, Contact Us.
+
+Dropdown under Services with sub-items:
+
+Tech Training
+
+Non-Tech Training
+
+Job Offerings
+
+IT Services (Software Development).
+
+Social media icons (LinkedIn, Twitter, Instagram, Facebook, YouTube) on the right.
+
+Footer:
+
+Repeat company branding, quick links, contact info, social media icons, copyright.
+
+Page Details
+Home
+
+Hero Section:
+
+Fullscreen with React Three Fiber (3D animation, e.g., rotating globe or abstract 3D shape).
+
+Overlayed text: “Empowering Skills, Creating Futures”.
+
+CTA buttons: “Explore Services” and “Contact Us”.
+
+Highlights Section: Showcase training, IT services, and job offerings with animated cards (Framer Motion hover effects).
+
+Why Choose Us section with neumorphic styled cards.
+
+GSAP scrolling animations for content reveal.
+
+About Us
+
+Company mission, vision, and values.
+
+Animated timeline for company journey.
+
+Glassmorphic cards for leadership/team showcase.
+
+Services
+
+Grid layout for service categories with Framer Motion hover effects.
+
+Each service card should expand or animate in when hovered.
+
+Products
+
+Showcase IT products or training platforms with animated product cards.
+
+Insights (Blog/News Section)
+
+Responsive blog cards with images, titles, categories, and hover animations.
+
+GSAP scroll-trigger animations for entry.
+
+Contact Us
+
+Contact form with validation.
+
+Glassmorphic input fields + submit button with neumorphic style.
+
+Animated map embed (React Google Maps or 3D globe from R3F).
+
+Animations & Effects
+
+Framer Motion for:
+
+Page transitions.
+
+Card hover/entry animations.
+
+Navbar link hover underline effects.
+
+React Three Fiber:
+
+Interactive 3D globe or floating 3D objects in Hero section.
+
+GSAP:
+
+Scroll-trigger animations (sections fade/slide in).
+
+Parallax effects.
+
+Glassmorphism:
+
+Navbars, dropdowns, contact form backgrounds.
+
+Neumorphism:
+
+Buttons, icons, CTA highlights.
+
+Responsiveness
+
+Mobile-first approach.
+
+Collapse navbar into a hamburger menu on smaller screens (animated with Framer Motion).
+
+Grid → stacked layout on smaller screens.
+
+Font sizes, spacing, and 3D elements scale down gracefully.
+
+Additional Notes
+
+Clean folder structure (components/, pages/, animations/, theme/, etc.).
+
+Use reusable UI components (Button, Card, Section, Navbar, Footer).
+
+Keep animations subtle and professional (not overwhelming).
+
+Ensure accessibility (semantic HTML, proper aria labels, alt tags).
+
+✅ End Goal: A modern, elegant, responsive, animated multi-page website for DLP Global Skillers Solutions that looks premium, engages users with motion/3D, and professionally showcases services in training, job offerings, and IT solutions.
+
+have attached company logo also use it and make  the theme according to that
