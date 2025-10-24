@@ -9,6 +9,7 @@ import { ScrollingMarquee } from "@/components/layouts/ScrollingMarquee";
 import { SplitSection } from "@/components/layouts/SplitSection";
 import { Button } from "@/components/ui/button";
 import { Code, Users, Briefcase, Server, ArrowRight, CheckCircle2, TrendingUp, Award, Target } from "lucide-react";
+import { Link } from "wouter";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +53,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-section-title-services">
-              Comprehensive Solutions
+              Comprehensive Solutions  
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-section-description-services">
               Four pillars of excellence designed to transform your future
@@ -87,7 +88,8 @@ export default function Home() {
                     <span>Portfolio-worthy projects</span>
                   </div>
                   <Button className="mt-4 w-full group" data-testid="button-explore-tech">
-                    Explore Programs
+                    <Link href="/services#tech">Explore Programs</Link>
+                    
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </div>
@@ -95,6 +97,7 @@ export default function Home() {
             </BentoCard>
 
             <BentoCard colSpan="2" delay={0.1}>
+              <Link href="/services#non-tech"  > 
               <div className="flex items-center space-x-4">
                 <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center flex-shrink-0">
                   <Users className="h-6 w-6 text-primary-foreground" />
@@ -107,7 +110,7 @@ export default function Home() {
                     Develop leadership, communication, and business skills essential for career growth.
                   </p>
                 </div>
-              </div>
+              </div></Link >
             </BentoCard>
 
             <BentoCard colSpan="1" delay={0.2}>
@@ -239,8 +242,9 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-8">
               We don't just teach—we transform. Our holistic approach combines expert instruction, real-world projects, and career support to ensure your success.
             </p>
-            <Button size="lg" className="group" data-testid="button-learn-more">
-              Learn More About Us
+            <Button size="lg" className="group" data-testid="button-learn-more" >
+              <Link href="/about"  >   Learn More About Us  </Link>
+            
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>

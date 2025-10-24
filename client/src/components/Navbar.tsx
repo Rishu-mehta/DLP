@@ -46,11 +46,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-sm"
-          : "bg-background/40 backdrop-blur-md"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-sm"
+        : "bg-background/40 backdrop-blur-md"
+        }`}
       data-testid="navbar-main"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +60,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <img src={logo} alt="DLP Logo" className="h-12 w-auto" />
+              <img src={logo} alt="DLP Logo" className="h-12 w-auto rounded-md" />
               <div className="hidden md:block">
                 <h1 className="text-lg font-semibold text-foreground">
                   DLP Global Skillers Solutions
@@ -115,11 +114,10 @@ export default function Navbar() {
               ) : (
                 <Link key={link.name} href={link.path} data-testid={`link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}>
                   <span
-                    className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors hover-elevate cursor-pointer ${
-                      location === link.path
-                        ? "text-primary"
-                        : "text-foreground"
-                    }`}
+                    className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors hover-elevate cursor-pointer ${location === link.path
+                      ? "text-primary"
+                      : "text-foreground"
+                      }`}
                   >
                     {link.name}
                   </span>
@@ -139,10 +137,12 @@ export default function Navbar() {
                 data-testid={`button-social-${social.label.toLowerCase()}`}
               >
                 <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                  <social.icon className="h-4 w-4" />
+                  <social.icon className="h-4 w-4   " />
                 </a>
+
               </Button>
             ))}
+
           </div>
 
           <Button
@@ -177,9 +177,8 @@ export default function Navbar() {
                     >
                       {link.name}
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          isServicesOpen ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${isServicesOpen ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     <AnimatePresence>
@@ -207,11 +206,10 @@ export default function Navbar() {
                 ) : (
                   <Link key={link.name} href={link.path} data-testid={`link-mobile-${link.name.toLowerCase().replace(/\s+/g, '-')}`}>
                     <span
-                      className={`block px-3 py-2 text-base font-medium rounded-md hover-elevate cursor-pointer ${
-                        location === link.path
-                          ? "text-primary"
-                          : "text-foreground"
-                      }`}
+                      className={`block px-3 py-2 text-base font-medium rounded-md hover-elevate cursor-pointer ${location === link.path
+                        ? "text-primary"
+                        : "text-foreground"
+                        }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.name}

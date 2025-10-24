@@ -5,11 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Users, Briefcase, Server, CheckCircle2, ArrowRight, Laptop, Database, Cloud, Shield, UserCheck, GraduationCap, TrendingUp, Award } from "lucide-react";
+import { useLocation } from "wouter";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState(0);
+   const [location] = useLocation();
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -34,6 +37,43 @@ export default function Services() {
 
     return () => ctx.revert();
   }, []);
+
+//  useEffect(() => {
+//   const updateActiveTab = () => {
+//     const hash = window.location.hash;
+
+//     if (hash === "#tech") setActiveTab(0);
+//     else if (hash === "#nontech" || hash === "#non-tech") setActiveTab(1);
+//     else if (hash === "#jobs") setActiveTab(2);
+//     else if (hash === "#it") setActiveTab(3);
+
+//     const section = document.querySelector("[data-testid='section-services-tabs']");
+//     if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+//   };
+
+//   updateActiveTab();
+//   window.addEventListener("hashchange", updateActiveTab);
+//   return () => window.removeEventListener("hashchange", updateActiveTab);
+// }, []);
+
+ useEffect(() => {
+  const updateTabFromHash = () => {
+    const hash = window.location.hash;
+    if (hash === "#tech") setActiveTab(0);
+    else if (hash === "#non-tech") setActiveTab(1);
+    else if (hash === "#jobs") setActiveTab(2);
+    else if (hash === "#it") setActiveTab(3);
+  };
+
+  // Run once on mount
+  updateTabFromHash();
+
+  // Listen for hash change
+  window.addEventListener("hashchange", updateTabFromHash);
+
+  // Cleanup on unmount
+  return () => window.removeEventListener("hashchange", updateTabFromHash);
+}, []);
 
   const tabs = [
     { id: 0, name: "Tech Training", icon: Code },
@@ -82,6 +122,7 @@ export default function Services() {
   ];
 
   const currentService = servicesContent[activeTab];
+
 
   return (
     <div className="min-h-screen pt-20">
@@ -170,7 +211,7 @@ export default function Services() {
                             ))}
                           </div>
                           <Button className="w-full group/btn" data-testid={`button-learn-${item.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                            Learn More
+                            Learn More 
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                           </Button>
                         </div>
