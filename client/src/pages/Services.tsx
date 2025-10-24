@@ -5,14 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Users, Briefcase, Server, CheckCircle2, ArrowRight, Laptop, Database, Cloud, Shield, UserCheck, GraduationCap, TrendingUp, Award } from "lucide-react";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState(0);
-   const [location] = useLocation();
-  
+  //  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
+
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -38,42 +39,42 @@ export default function Services() {
     return () => ctx.revert();
   }, []);
 
-//  useEffect(() => {
-//   const updateActiveTab = () => {
-//     const hash = window.location.hash;
+  //  useEffect(() => {
+  //   const updateActiveTab = () => {
+  //     const hash = window.location.hash;
 
-//     if (hash === "#tech") setActiveTab(0);
-//     else if (hash === "#nontech" || hash === "#non-tech") setActiveTab(1);
-//     else if (hash === "#jobs") setActiveTab(2);
-//     else if (hash === "#it") setActiveTab(3);
+  //     if (hash === "#tech") setActiveTab(0);
+  //     else if (hash === "#nontech" || hash === "#non-tech") setActiveTab(1);
+  //     else if (hash === "#jobs") setActiveTab(2);
+  //     else if (hash === "#it") setActiveTab(3);
 
-//     const section = document.querySelector("[data-testid='section-services-tabs']");
-//     if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-//   };
+  //     const section = document.querySelector("[data-testid='section-services-tabs']");
+  //     if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   };
 
-//   updateActiveTab();
-//   window.addEventListener("hashchange", updateActiveTab);
-//   return () => window.removeEventListener("hashchange", updateActiveTab);
-// }, []);
+  //   updateActiveTab();
+  //   window.addEventListener("hashchange", updateActiveTab);
+  //   return () => window.removeEventListener("hashchange", updateActiveTab);
+  // }, []);
 
- useEffect(() => {
-  const updateTabFromHash = () => {
-    const hash = window.location.hash;
-    if (hash === "#tech") setActiveTab(0);
-    else if (hash === "#non-tech") setActiveTab(1);
-    else if (hash === "#jobs") setActiveTab(2);
-    else if (hash === "#it") setActiveTab(3);
-  };
+  useEffect(() => {
+    const updateTabFromHash = () => {
+      const hash = window.location.hash;
+      if (hash === "#tech") setActiveTab(0);
+      else if (hash === "#non-tech") setActiveTab(1);
+      else if (hash === "#jobs") setActiveTab(2);
+      else if (hash === "#it") setActiveTab(3);
+    };
 
-  // Run once on mount
-  updateTabFromHash();
+    // Run once on mount
+    updateTabFromHash();
 
-  // Listen for hash change
-  window.addEventListener("hashchange", updateTabFromHash);
+    // Listen for hash change
+    window.addEventListener("hashchange", updateTabFromHash);
 
-  // Cleanup on unmount
-  return () => window.removeEventListener("hashchange", updateTabFromHash);
-}, []);
+    // Cleanup on unmount
+    return () => window.removeEventListener("hashchange", updateTabFromHash);
+  }, []);
 
   const tabs = [
     { id: 0, name: "Tech Training", icon: Code },
@@ -87,36 +88,36 @@ export default function Services() {
       title: "Tech Training",
       subtitle: "Master the technologies shaping tomorrow",
       items: [
-        { icon: Code, name: "Full-Stack Development", desc: "Build complete web applications", features: ["React & Node.js", "Database design", "API development"] },
-        { icon: Cloud, name: "Cloud Computing", desc: "Deploy and scale on major platforms", features: ["AWS & Azure", "DevOps pipelines", "Containerization"] },
-        { icon: Database, name: "Data Science & AI", desc: "Harness data for intelligent insights", features: ["Machine learning", "Python analytics", "Deep learning"] },
+        { icon: Code, name: "Full-Stack Development", desc: "Build complete web applications", features: ["React & Node.js", "Database design", "API development"], path: "/services/FullStackDetail" },
+        { icon: Cloud, name: "Cloud Computing", desc: "Deploy and scale on major platforms", features: ["AWS & Azure", "DevOps pipelines", "Containerization"], path: "/services/Cloud" },
+        { icon: Database, name: "Data Science & AI", desc: "Harness data for intelligent insights", features: ["Machine learning", "Python analytics", "Deep learning"], path: "/services/DataScience" },
       ],
     },
     {
       title: "Non-Tech Training",
       subtitle: "Develop the skills that set you apart",
       items: [
-        { icon: Users, name: "Leadership Development", desc: "Inspire and manage effectively", features: ["Team management", "Conflict resolution", "Strategic thinking"] },
-        { icon: TrendingUp, name: "Business Skills", desc: "Core competencies for growth", features: ["Project management", "Financial literacy", "Communication"] },
-        { icon: Award, name: "Soft Skills Training", desc: "Essential interpersonal abilities", features: ["Effective communication", "Time management", "Emotional intelligence"] },
+        { icon: Users, name: "Leadership Development", desc: "Inspire and manage effectively", features: ["Team management", "Conflict resolution", "Strategic thinking"], path: "/services/leadership" },
+        { icon: TrendingUp, name: "Business Skills", desc: "Core competencies for growth", features: ["Project management", "Financial literacy", "Communication"], path: "/services/Bussiness" },
+        { icon: Award, name: "Soft Skills Training", desc: "Essential interpersonal abilities", features: ["Effective communication", "Time management", "Emotional intelligence"], path: "/services/SoftSkill" },
       ],
     },
     {
       title: "Job Offerings",
       subtitle: "Connect with your next opportunity",
       items: [
-        { icon: UserCheck, name: "Career Counseling", desc: "Personalized career guidance", features: ["One-on-one mentoring", "Career path planning", "Skills assessment"] },
-        { icon: Briefcase, name: "Job Placement", desc: "Direct connections with employers", features: ["Exclusive job listings", "Company introductions", "Placement assistance"] },
-        { icon: GraduationCap, name: "Interview Preparation", desc: "Build interview confidence", features: ["Mock interviews", "Resume optimization", "Negotiation strategies"] },
+        { icon: UserCheck, name: "Career Counseling", desc: "Personalized career guidance", features: ["One-on-one mentoring", "Career path planning", "Skills assessment"], path: "/services/Cloud" },
+        { icon: Briefcase, name: "Job Placement", desc: "Direct connections with employers", features: ["Exclusive job listings", "Company introductions", "Placement assistance"], path: "/services/Cloud" },
+        { icon: GraduationCap, name: "Interview Preparation", desc: "Build interview confidence", features: ["Mock interviews", "Resume optimization", "Negotiation strategies"], path: "/services/Cloud" },
       ],
     },
     {
       title: "IT Services",
       subtitle: "Custom solutions for your business",
       items: [
-        { icon: Laptop, name: "Web Development", desc: "Modern web applications", features: ["Responsive design", "E-commerce solutions", "Progressive web apps"] },
-        { icon: Server, name: "Enterprise Solutions", desc: "Scalable systems for organizations", features: ["CRM & ERP systems", "Business intelligence", "Integration services"] },
-        { icon: Shield, name: "Cloud & Security", desc: "Secure infrastructure solutions", features: ["Cloud migration", "Security audits", "Compliance management"] },
+        { icon: Laptop, name: "Web Development", desc: "Modern web applications", features: ["Responsive design", "E-commerce solutions", "Progressive web apps"], path: "/services/Cloud" },
+        { icon: Server, name: "Enterprise Solutions", desc: "Scalable systems for organizations", features: ["CRM & ERP systems", "Business intelligence", "Integration services"], path: "/services/Cloud" },
+        { icon: Shield, name: "Cloud & Security", desc: "Secure infrastructure solutions", features: ["Cloud migration", "Security audits", "Compliance management"], path: "/services/Cloud" },
       ],
     },
   ];
@@ -200,7 +201,7 @@ export default function Services() {
                             {item.desc}
                           </p>
                         </div>
-                        
+
                         <div className="bg-muted/30 p-8 pt-6">
                           <div className="space-y-3 mb-6">
                             {item.features.map((feature, idx) => (
@@ -210,8 +211,16 @@ export default function Services() {
                               </div>
                             ))}
                           </div>
-                          <Button className="w-full group/btn" data-testid={`button-learn-${item.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                            Learn More 
+                          <Button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                              setLocation(item.path);
+                            }}
+                            className="w-full group/btn"
+                            data-testid={`button-learn-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                          >
+                            Learn More
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                           </Button>
                         </div>

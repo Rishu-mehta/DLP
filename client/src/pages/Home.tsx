@@ -114,7 +114,8 @@ export default function Home() {
             </BentoCard>
 
             <BentoCard colSpan="1" delay={0.2}>
-              <div className="text-center">
+              <Link href="/services#jobs"  > 
+              <div className="text-center cursor-pointer">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
@@ -124,11 +125,12 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">
                   Connect with 500+ partner companies
                 </p>
-              </div>
+              </div></Link >
             </BentoCard>
 
             <BentoCard colSpan="1" delay={0.3}>
-              <div className="text-center">
+              <Link href="/services#it"  > 
+              <div className="text-center cursor-pointer">
                 <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
                   <Server className="h-6 w-6 text-secondary" />
                 </div>
@@ -138,7 +140,7 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">
                   Custom software solutions
                 </p>
-              </div>
+              </div></Link >
             </BentoCard>
           </BentoGrid>
         </div>

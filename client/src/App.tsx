@@ -12,6 +12,12 @@ import Products from "@/pages/Products";
 import Insights from "@/pages/Insights";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import FullStackDetail from "./components/courses/FullStackDetail";
+import CloudComputingDetail from "./components/courses/CloudComputingDetail";
+import DataScienceDetail from "./components/courses/DataScienceDetail";
+import LeadershipDevelopmentDetail from "./components/courses/LeadershipDevelopmentDetail";
+import SoftSkills from "./components/courses/SoftSkills";
+import Business from "./components/courses/Business";
 
 function Router() {
   return (
@@ -19,9 +25,19 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
+      
       <Route path="/products" component={Products} />
       <Route path="/insights" component={Insights} />
       <Route path="/contact" component={Contact} />
+      
+
+      <Route path="/services/FullStackDetail" component={FullStackDetail} />
+      <Route path="/services/Cloud" component={CloudComputingDetail} />
+      <Route path="/services/DataScience" component={DataScienceDetail} />
+      <Route path="/services/leadership" component={LeadershipDevelopmentDetail} />
+      <Route path="/services/SoftSkill" component={SoftSkills} />
+      <Route path="/services/Bussiness" component={Business} />
+      
       <Route component={NotFound} />
     </Switch>
   );
@@ -37,6 +53,8 @@ function App() {
             <Router />
           </main>
           <Footer />
+           
+          
         </div>
         <Toaster />
       </TooltipProvider>
