@@ -64,18 +64,7 @@ export default function SoftSkills () {
               <p className="text-muted-foreground text-sm mb-4">{topic.desc}</p>
 
               {/* Inline Learn More Button */}
-              <Button
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-                  setLocation(`/softskills/${topic.title.toLowerCase().replace(/\s+/g, '-')}`);
-                }}
-                className="w-full group/btn"
-                data-testid={`button-learn-${topic.title.toLowerCase().replace(/\s+/g, '-')}`}
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-              </Button>
+              
             </CardContent>
           </Card>
         ))}

@@ -106,18 +106,18 @@ export default function Services() {
       title: "Job Offerings",
       subtitle: "Connect with your next opportunity",
       items: [
-        { icon: UserCheck, name: "Career Counseling", desc: "Personalized career guidance", features: ["One-on-one mentoring", "Career path planning", "Skills assessment"], path: "/services/Cloud" },
-        { icon: Briefcase, name: "Job Placement", desc: "Direct connections with employers", features: ["Exclusive job listings", "Company introductions", "Placement assistance"], path: "/services/Cloud" },
-        { icon: GraduationCap, name: "Interview Preparation", desc: "Build interview confidence", features: ["Mock interviews", "Resume optimization", "Negotiation strategies"], path: "/services/Cloud" },
+        { icon: UserCheck, name: "Career Counseling", desc: "Personalized career guidance", features: ["One-on-one mentoring", "Career path planning", "Skills assessment"], path: "/services/Career" },
+        { icon: Briefcase, name: "Job Placement", desc: "Direct connections with employers", features: ["Exclusive job listings", "Company introductions", "Placement assistance"], path: "/services/JobPlacement" },
+        { icon: GraduationCap, name: "Interview Preparation", desc: "Build interview confidence", features: ["Mock interviews", "Resume optimization", "Negotiation strategies"], path: "/services/InterviewPrep" },
       ],
     },
     {
       title: "IT Services",
       subtitle: "Custom solutions for your business",
       items: [
-        { icon: Laptop, name: "Web Development", desc: "Modern web applications", features: ["Responsive design", "E-commerce solutions", "Progressive web apps"], path: "/services/Cloud" },
-        { icon: Server, name: "Enterprise Solutions", desc: "Scalable systems for organizations", features: ["CRM & ERP systems", "Business intelligence", "Integration services"], path: "/services/Cloud" },
-        { icon: Shield, name: "Cloud & Security", desc: "Secure infrastructure solutions", features: ["Cloud migration", "Security audits", "Compliance management"], path: "/services/Cloud" },
+        { icon: Laptop, name: "Web Development", desc: "Modern web applications", features: ["Responsive design", "E-commerce solutions", "Progressive web apps"], path: "/services/webdev" },
+        { icon: Server, name: "Enterprise Solutions", desc: "Scalable systems for organizations", features: ["CRM & ERP systems", "Business intelligence", "Integration services"], path: "/services/enterprise" },
+        { icon: Shield, name: "Cloud & Security", desc: "Secure infrastructure solutions", features: ["Cloud migration", "Security audits", "Compliance management"], path: "/services/cloudDetails" },
       ],
     },
   ];

@@ -1,36 +1,36 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Users, Handshake, Brain, CheckCircle2, Compass, Target } from "lucide-react";
+import { UserCheck, Route, ClipboardCheck, CheckCircle2, Compass, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 
-export default function LeadershipDevelopmentDetail() {
+export default function Career () {
   const [, setLocation] = useLocation();
 
   const topics = [
     {
-      icon: Users,
-      title: "Team Management",
-      desc: "Develop the ability to lead teams effectively, delegate tasks, set clear expectations, and create a culture of accountability and motivation."
+      icon: UserCheck,
+      title: "One-on-One Mentoring",
+      desc: "Receive personalized guidance from experienced mentors who help you understand your strengths, explore industries, and prepare for interviews and internships."
     },
     {
-      icon: Handshake,
-      title: "Conflict Resolution",
-      desc: "Learn techniques to mediate conflicts, foster open communication, and transform disagreements into opportunities for collaboration."
+      icon: Route,
+      title: "Career Path Planning",
+      desc: "Chart a clear roadmap for your career — identify goals, choose relevant skills, and plan realistic milestones for professional success."
     },
     {
-      icon: Brain,
-      title: "Strategic Thinking",
-      desc: "Strengthen your decision-making skills by understanding long-term goals, analyzing risks, and crafting strategies for organizational growth."
+      icon: ClipboardCheck,
+      title: "Skills Assessment",
+      desc: "Evaluate your technical and soft skills through expert analysis to uncover growth areas and match you with suitable internship or job opportunities."
     }
   ];
 
   const benefits = [
-    "Enhances your ability to inspire and influence others.",
-    "Improves communication and emotional intelligence.",
-    "Builds credibility and confidence in leadership roles.",
-    "Increases career advancement opportunities across industries."
+    "Personalized guidance tailored to your career goals.",
+    "Helps you identify strengths, weaknesses, and ideal job roles.",
+    "Builds confidence through structured career planning.",
+    "Connects you with internship and job opportunities at DLP Global Skillers Solutions partners."
   ];
 
   return (
@@ -41,10 +41,12 @@ export default function LeadershipDevelopmentDetail() {
       className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mt-10"
     >
       <h2 className="text-4xl font-bold text-foreground mb-6 text-center">
-        Leadership Development
+        Career Counseling
       </h2>
       <p className="text-muted-foreground mb-8 text-center max-w-3xl mx-auto">
-        Inspire and manage effectively — Leadership Development empowers you to guide teams, resolve conflicts, and think strategically to achieve organizational success.
+        Personalized career guidance — At <span className="text-primary font-semibold">DLP Global Skillers Solutions</span>, 
+        we help students and professionals plan their careers with one-on-one mentoring, strategic planning, and skill assessments designed 
+        to connect you with the right internships and job opportunities.
       </p>
 
       {/* Topics */}
@@ -64,7 +66,7 @@ export default function LeadershipDevelopmentDetail() {
               <p className="text-muted-foreground text-sm mb-4">{topic.desc}</p>
 
               {/* Inline Learn More Button */}
-               
+              
             </CardContent>
           </Card>
         ))}
@@ -77,10 +79,12 @@ export default function LeadershipDevelopmentDetail() {
         transition={{ delay: 0.2 }}
         className="mb-12"
       >
-        <h3 className="text-2xl font-bold text-foreground mb-4">How to Learn</h3>
+        <h3 className="text-2xl font-bold text-foreground mb-4">How Career Counseling Works</h3>
         <p className="text-muted-foreground mb-2">
-          Begin by understanding leadership styles and emotional intelligence. Engage in active listening, team exercises, and feedback sessions. 
-          Explore case studies and role-play scenarios to practice decision-making, empathy, and communication under pressure.
+          Start by booking a one-on-one session with a certified mentor at DLP Global Skillers Solutions. 
+          You'll undergo a career and skill assessment to evaluate your strengths, preferences, and goals. 
+          Based on this, mentors help you plan a personalized career path, recommend relevant training programs, 
+          and connect you with suitable internship or job opportunities through our partner network.
         </p>
       </motion.div>
 
@@ -91,7 +95,7 @@ export default function LeadershipDevelopmentDetail() {
         transition={{ delay: 0.4 }}
         className="mb-12"
       >
-        <h3 className="text-2xl font-bold text-foreground mb-4">Benefits of Leadership Development</h3>
+        <h3 className="text-2xl font-bold text-foreground mb-4">Benefits of Career Counseling</h3>
         <ul className="space-y-2">
           {benefits.map((item, idx) => (
             <li key={idx} className="flex items-start space-x-2 text-muted-foreground">
@@ -110,9 +114,10 @@ export default function LeadershipDevelopmentDetail() {
       >
         <h3 className="text-2xl font-bold text-foreground mb-4">Career & Growth Potential</h3>
         <p className="text-muted-foreground">
-          Leadership skills are essential across every sector. Professionals with strong management and communication abilities often advance into 
-          roles like Team Lead, Project Manager, or Director. Senior leadership positions can command salaries upwards of ₹15–40 LPA, 
-          along with significant influence and responsibility.
+          With personalized career guidance, individuals gain clarity and confidence in pursuing the right path. 
+          Whether you’re seeking your first internship, transitioning careers, or aiming for leadership roles, 
+          our counseling sessions empower you to make informed choices and unlock high-growth opportunities 
+          across industries — all through the expert mentorship of <span className="text-primary font-semibold">DLP Global Skillers Solutions</span>.
         </p>
       </motion.div>
     </motion.div>

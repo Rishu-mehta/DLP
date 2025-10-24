@@ -18,6 +18,12 @@ import DataScienceDetail from "./components/courses/DataScienceDetail";
 import LeadershipDevelopmentDetail from "./components/courses/LeadershipDevelopmentDetail";
 import SoftSkills from "./components/courses/SoftSkills";
 import Business from "./components/courses/Business";
+import Career from "./components/courses/Career";
+import JobPlacementDetail from "./components/courses/JobPlacement";
+import InterviewPreparationDetail from "./components/courses/InterviewPrep";
+import WebDevelopmentDetail from "./components/courses/WebDevelopmentDetail";
+import EnterpriseSolutionsDetail from "./components/courses/Enterprise";
+import CloudSecurityDetail from "./components/courses/CloudSecurityDetail";
 
 function Router() {
   return (
@@ -37,6 +43,12 @@ function Router() {
       <Route path="/services/leadership" component={LeadershipDevelopmentDetail} />
       <Route path="/services/SoftSkill" component={SoftSkills} />
       <Route path="/services/Bussiness" component={Business} />
+      <Route path="/services/Career" component={Career} />
+      <Route path="/services/JobPlacement"  component={JobPlacementDetail} />
+      <Route path="/services/InterviewPrep"  component={InterviewPreparationDetail} />
+      <Route path="/services/webdev"  component={WebDevelopmentDetail} />
+      <Route path="/services/enterprise"  component={EnterpriseSolutionsDetail} />
+      <Route path="/services/cloudDetails"  component={CloudSecurityDetail} />
       
       <Route component={NotFound} />
     </Switch>
